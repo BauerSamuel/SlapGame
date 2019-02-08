@@ -3,9 +3,9 @@ var jerry = {
   health: 100,
   hits: 0,
   attacks: {
-    slap: 1,
-    punch: 5,
-    kick: 10
+    stickJab: 1,
+    rakeJab: 5,
+    shovelSmack: 10
   },
   items: []
 }
@@ -28,19 +28,31 @@ var items = {
     description: 'Protect'
   }
 }
-function slap(character) {
+function stickJab(character) {
   character.hits++;
-  character.health -= (1 + addMods());
+  if (character.health > 0) {
+    character.health -= (1 + addMods());
+  } else {
+    character.health = 0;
+  }
   update(character);
 }
-function punch(character) {
+function rakeJab(character) {
   character.hits++;
-  character.health -= (5 + addMods());
+  if (character.health > 4) {
+    character.health -= (5 + addMods());
+  } else {
+    character.health = 0;
+  }
   update(character);
 }
-function kick(character) {
+function shovelSmack(character) {
   character.hits++;
-  character.health -= (10 + addMods());
+  if (character.health > 9) {
+    character.health -= (10 + addMods());
+  } else {
+    character.health = 0;
+  }
   update(character);
 }
 function giveItem(itemName) {
