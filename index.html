@@ -19,9 +19,14 @@
 	<img id="target" src="https://placehold.it/200x400" />
 	<script src="game.js"></script>
 	<footer>
-		<button onclick=slap(jerry)>Slap</button>
-		<button onclick=punch(jerry)>Punch</button>
-		<button onclick=kick(jerry)>Kick</button>
+		<button onclick="slap(jerry)">Slap</button>
+		<button onclick="punch(jerry)">Punch</button>
+		<button onclick="kick(jerry)">Kick</button>
+		<div id="items">
+			<button onclick="giveItem('fire')">Fire</button>
+			<button onclick="giveItem('poison')">Poision</button>
+			<button onclick="giveItem('armor')">Armor</button>
+		</div>
 	</footer>
 </body>
 
