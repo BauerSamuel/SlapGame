@@ -30,9 +30,10 @@ var items = {
 }
 function stickJab(character) {
   character.hits++;
-  if (character.health > 0) {
+  if (character.health > 0 && character.health < 101) {
     character.health -= (1 + addMods());
-  } else {
+  }
+  else {
     character.health = 0;
   }
   update(character);
@@ -41,7 +42,8 @@ function rakeJab(character) {
   character.hits++;
   if (character.health > 4) {
     character.health -= (5 + addMods());
-  } else {
+  }
+  else {
     character.health = 0;
   }
   update(character);
@@ -50,7 +52,8 @@ function shovelSmack(character) {
   character.hits++;
   if (character.health > 9) {
     character.health -= (10 + addMods());
-  } else {
+  }
+  else {
     character.health = 0;
   }
   update(character);
@@ -69,6 +72,9 @@ function addMods() {
 }
 
 function update(character) {
+  if (character.health > 100) {
+    character.health = 100;
+  }
   document.getElementById('health').innerText = character.health;
   console.log('The health is ', character.health)
   document.getElementById('name').innerText = character.name;
