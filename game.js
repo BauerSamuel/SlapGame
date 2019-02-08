@@ -1,5 +1,11 @@
-var health = 100;
-function poke() {
+var health = 20;
+function slap() {
   health--;
-  console.log("health is now: ", health)
+  update();
 }
+
+function update() {
+  document.getElementById('health').innerText = health;
+}
+
+update();
