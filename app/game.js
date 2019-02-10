@@ -88,7 +88,7 @@ function update(character) {
   }
   else if (character.health == 0) {
     alert('You have awoken then bear, its tolerence is now 0. You shouldn\'t have poked the bear! You are now dead.');
-    document.getElementById('images').innerHTML = `<img src="/assets/images/Mix.png" />`
+    document.getElementById('images').innerHTML = `<img src="assets/images/Mix.png" />`
   }
   document.getElementById('health').innerText = character.health;
   console.log('The health is ', character.health)
