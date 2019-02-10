@@ -32,7 +32,7 @@ var items = {
 }
 
 function returnImg() {
-  document.getElementById('images').innerHTML = `<img src="assets/images/Man_Bear.png" />`
+  document.getElementById('images').innerHTML = `<img src="/assets/images/Man_Bear.png" />`
 }
 returnImg();
 
@@ -44,7 +44,7 @@ function stickJab(character) {
   else {
     character.health = 0;
   }
-  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWStick.png" />`
+  document.getElementById('images').innerHTML = `<img src="/assets/images/ManPokesWStick.png" />`
   update(character);
 }
 function rakeJab(character) {
@@ -55,7 +55,7 @@ function rakeJab(character) {
   else {
     character.health = 0;
   }
-  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWRake.png" />`
+  document.getElementById('images').innerHTML = `<img src="/assets/images/ManPokesWRake.png" />`
   update(character);
 }
 function shovelSmack(character) {
@@ -66,7 +66,7 @@ function shovelSmack(character) {
   else {
     character.health = 0;
   }
-  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWShovel.png" />`
+  document.getElementById('images').innerHTML = `<img src="/assets/images/ManPokesWShovel.png" />`
   update(character);
 }
 function giveItem(itemName) {
