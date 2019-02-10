@@ -32,7 +32,7 @@ var items = {
 }
 
 function returnImg() {
-  document.getElementById('images').innerHTML = `<img src="/assets/images/Man_Bear.png" />`
+  document.getElementById('images').innerHTML = `<img src="assets/images/Man_Bear.png" />`
 }
 returnImg();
 
