@@ -30,6 +30,12 @@ var items = {
     description: 'Protect'
   }
 }
+
+function returnImg() {
+  document.getElementById('images').innerHTML = `<img src="assets/images/Man_Bear.png" />`
+}
+returnImg();
+
 function stickJab(character) {
   character.hits++;
   if (character.health > 0 && character.health < 101) {
@@ -38,6 +44,7 @@ function stickJab(character) {
   else {
     character.health = 0;
   }
+  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWStick.png" />`
   update(character);
 }
 function rakeJab(character) {
@@ -48,6 +55,7 @@ function rakeJab(character) {
   else {
     character.health = 0;
   }
+  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWRake.png" />`
   update(character);
 }
 function shovelSmack(character) {
@@ -58,6 +66,7 @@ function shovelSmack(character) {
   else {
     character.health = 0;
   }
+  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWShovel.png" />`
   update(character);
 }
 function giveItem(itemName) {
@@ -76,6 +85,10 @@ function addMods() {
 function update(character) {
   if (character.health > 100) {
     character.health = 100;
+  }
+  else if (character.health == 0) {
+    alert('You have awoken then bear, its tolerence is now 0. You shouldn\'t have poked the bear! You are now dead.');
+    document.getElementById('images').innerHTML = `<img src="assets/images/Mix.png" />`
   }
   document.getElementById('health').innerText = character.health;
   console.log('The health is ', character.health)
