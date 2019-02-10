@@ -1,3 +1,5 @@
+//setTimeout()
+
 var jerry = {
   name: 'Jerry',
   health: 100,
