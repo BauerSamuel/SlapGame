@@ -44,7 +44,7 @@ function stickJab(character) {
   else {
     character.health = 0;
   }
-  document.getElementById('images').innerHTML = `<img src="/assets/images/ManPokesWStick.png" />`
+  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWStick.png" />`
   update(character);
 }
 function rakeJab(character) {
@@ -55,7 +55,7 @@ function rakeJab(character) {
   else {
     character.health = 0;
   }
-  document.getElementById('images').innerHTML = `<img src="/assets/images/ManPokesWRake.png" />`
+  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWRake.png" />`
   update(character);
 }
 function shovelSmack(character) {
@@ -66,7 +66,7 @@ function shovelSmack(character) {
   else {
     character.health = 0;
   }
-  document.getElementById('images').innerHTML = `<img src="/assets/images/ManPokesWShovel.png" />`
+  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWShovel.png" />`
   update(character);
 }
 function giveItem(itemName) {
@@ -88,7 +88,7 @@ function update(character) {
   }
   else if (character.health == 0) {
     alert('You have awoken then bear, its tolerence is now 0. You shouldn\'t have poked the bear! You are now dead.');
-    document.getElementById('images').innerHTML = `<img src="assets/images/Mix.png" />`
+    document.getElementById('images').innerHTML = `<img src="/assets/images/Mix.png" />`
   }
   document.getElementById('health').innerText = character.health;
   console.log('The health is ', character.health)
