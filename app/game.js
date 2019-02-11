@@ -1,7 +1,7 @@
 //setTimeout()
 
-var jerry = {
-  name: 'Jerry',
+var bear = {
+  name: 'Bear',
   health: 100,
   hits: 0,
   attacks: {
@@ -75,8 +75,8 @@ function giveItem(itemName) {
 
 function addMods() {
   let total = 0;
-  for (let i = 0; i < jerry.items.length; i++) {
-    var item = jerry.items[i];
+  for (let i = 0; i < bear.items.length; i++) {
+    var item = bear.items[i];
     total += item.modifier;
   }
   return total;
@@ -123,10 +123,10 @@ function reset() {
       elements[i].disabled = false;
     }
     returnImg();
-    update(jerry);
+    update(bear);
   } else {
     txt = "Cancel!";
   }
 }
 
-update(jerry);
+update(bear);
