@@ -11,21 +11,68 @@
 	<title>Don't Poke the Bear</title>
 </head>
 
-<body>
-	<header>
-		<span>Health: <span id="health">--</span><span>|| Name: </span><span id="name"></span><span>|| Hits: </span><span
-				id="hits"></span></span>
+<body class="bg-img">
+	<header class="container-fluid theHeader">
+		<div class="row">
+			<div class="col-3">
+				<h3>Made by: Samuel Bauer</h3>
+			</div>
+			<div class="col-9">
+				<h1>There once was a bear who was sleeping peacefully when a stupid human came by with some strange tools. Since
+					the human was stupid, it didn't know how to respond to the sight of a sleeping bear, so naturally some
+					thoughts passed through the human's head. You now get to control that very human and make decisions for it.
+					Good luck.</h1>
+			</div>
+		</div>
 	</header>
-	<div id="images">
+	<div class="container-fluid images">
+		<div class="row flex">
+			<div class="col text-center">
+				<div id="image">
+				</div>
+			</div>
+		</div>
 	</div>
-	<footer>
-		<button onmousedown="stickJab(jerry)" onmouseup="returnImg()">Poke with stick</button>
-		<button onmousedown="rakeJab(jerry)" onmouseup="returnImg()">Poke with the rake</button>
-		<button onmousedown="shovelSmack(jerry)" onmouseup="returnImg()">Smack with the shovel</button>
-		<div id="items">
-			<button onclick="giveItem('fire')">Fire</button>
-			<button onclick="giveItem('poison')">Poison</button>
-			<button onclick="giveItem('armor')">Armor</button>
+	<footer class="contaner-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-4">
+				<button type="button" class="btn btn-primary btn-large btn-block" onmousedown="stickJab(jerry)"
+					onmouseup="returnImg()">Poke with stick</button>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<button type="button" class="btn btn-primary btn-large btn-block" onmousedown="rakeJab(jerry)"
+					onmouseup="returnImg()">Poke with the rake</button>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<button type="button" class="btn btn-primary btn-large btn-block" onmousedown="shovelSmack(jerry)"
+					onmouseup="returnImg()">Smack with the shovel</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-4" id="items">
+				<button type="button" class="btn btn-warning btn-large btn-block" onclick="giveItem('yell')">Yell while
+					poking</button>
+			</div>
+			<div class="col-xs-12 col-md-4" id="items">
+				<button type="button" class="btn btn-warning btn-large btn-block" onclick="giveItem('fire')">Apply fire to
+					weapon</button>
+			</div>
+			<div class="col-xs-12 col-md-4" id="items">
+				<button type="button" class="btn btn-warning btn-large btn-block" onclick="giveItem('honey')">Bear licks honey &
+					sleeps heavier</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-center">
+				<button class="btn btn-info" onclick="reset()">Start Over?</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-center">
+				<span>Health: <span id="health">--</span><span>|| Name: </span><span id="name"></span><span>|| Hits:
+					</span><span id="hits"></span></span>
+			</div>
 		</div>
 	</footer>
 	<script src="app/game.js"></script>

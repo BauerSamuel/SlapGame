@@ -13,26 +13,26 @@ var jerry = {
 }
 
 var items = {
+  yell: {
+    name: 'Yell',
+    modifier: 2,
+    description: 'It\'s not very effective.'
+  },
   fire: {
     name: 'Fire',
-    modifier: 2,
-    description: 'It\'s not very effective...'
-  },
-  poison: {
-    name: 'Poison',
     modifier: 3,
-    description: 'A critical hit.'
+    description: 'How annoying.'
 
   },
-  armor: {
-    name: 'Armor',
+  honey: {
+    name: 'Honey',
     modifier: -2,
-    description: 'Protect'
+    description: 'The bear is fast asleep'
   }
 }
 
 function returnImg() {
-  document.getElementById('images').innerHTML = `<img src="assets/images/Man_Bear.png" />`
+  document.getElementById('image').innerHTML = `<img src="assets/images/Man_Bear.png" />`
 }
 returnImg();
 
@@ -44,7 +44,7 @@ function stickJab(character) {
   else {
     character.health = 0;
   }
-  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWStick.png" />`
+  document.getElementById('image').innerHTML = `<img src="assets/images/ManPokesWStick.png" />`
   update(character);
 }
 function rakeJab(character) {
@@ -55,7 +55,7 @@ function rakeJab(character) {
   else {
     character.health = 0;
   }
-  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWRake.png" />`
+  document.getElementById('image').innerHTML = `<img src="assets/images/ManPokesWRake.png" />`
   update(character);
 }
 function shovelSmack(character) {
@@ -66,7 +66,7 @@ function shovelSmack(character) {
   else {
     character.health = 0;
   }
-  document.getElementById('images').innerHTML = `<img src="assets/images/ManPokesWShovel.png" />`
+  document.getElementById('image').innerHTML = `<img src="assets/images/ManPokesWShovel.png" />`
   update(character);
 }
 function giveItem(itemName) {
@@ -85,15 +85,40 @@ function addMods() {
 function update(character) {
   if (character.health > 100) {
     character.health = 100;
+    document.getElementById('health').innerText = character.health;
+    console.log('The health is ', character.health)
+    document.getElementById('name').innerText = character.name;
+    document.getElementById('hits').innerText = character.hits;
   }
-  else if (character.health == 0) {
+  else if (character.health < 1) {
+    character.health = 0;
     alert('You have awoken then bear, its tolerence is now 0. You shouldn\'t have poked the bear! You are now dead.');
-    document.getElementById('images').innerHTML = `<img src="assets/images/Mix.png" />`
+    document.getElementById('image').innerHTML = `<img src="assets/images/Mix.png" />`
+    document.getElementById('health').innerText = character.health;
+    console.log('The health is ', character.health)
+    document.getElementById('name').innerText = character.name;
+    document.getElementById('hits').innerText = character.hits;
+
+  } else {
+
+    document.getElementById('health').innerText = character.health;
+    console.log('The health is ', character.health)
+    document.getElementById('name').innerText = character.name;
+    document.getElementById('hits').innerText = character.hits;
   }
-  document.getElementById('health').innerText = character.health;
-  console.log('The health is ', character.health)
-  document.getElementById('name').innerText = character.name;
-  document.getElementById('hits').innerText = character.hits;
+}
+function reset() {
+  var txt;
+  if (confirm("Start over and do things right?")) {
+    txt = "Sure, I won't poke the bear this time!";
+    jerry.health = 100;
+    jerry.hits = 0;
+    jerry.items = [];
+    returnImg();
+    update(jerry);
+  } else {
+    txt = "Cancel!";
+  }
 }
 
 update(jerry);

@@ -1,1 +1,19 @@
 /*Only use this file if you want to override bootstrap or create your own style*/
+.images {
+  height : 200px;
+  margin-bottom: 5vh;
+}
+
+.bg-img{
+  background-image: url('images/BackdropForest.png');
+  background-size: cover;
+  background-position: 55% 80%;
+  background-repeat: no-repeat;
+  /* width: 50vw; */
+  min-width: 375px;
+  background-color: #168600;
+}
+
+.theHeader{
+  margin-bottom: 100vh;
+}
