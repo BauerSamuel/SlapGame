@@ -92,7 +92,11 @@ function update(character) {
   }
   else if (character.health < 1) {
     character.health = 0;
-    alert('You have awoken then bear, its tolerence is now 0. You shouldn\'t have poked the bear! You are now dead.');
+    alert('The bear awakens in anger. You shouldn\'t have poked the bear! You are now dead.');
+    let elements = document.getElementsByClassName("action")
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].disabled = true;
+    }
     document.getElementById('image').innerHTML = `<img src="assets/images/Mix.png" />`
     document.getElementById('health').innerText = character.health;
     console.log('The health is ', character.health)
@@ -114,6 +118,10 @@ function reset() {
     jerry.health = 100;
     jerry.hits = 0;
     jerry.items = [];
+    let elements = document.getElementsByClassName("action")
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].disabled = false;
+    }
     returnImg();
     update(jerry);
   } else {

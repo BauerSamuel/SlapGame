@@ -36,36 +36,39 @@
 	<footer class="contaner-fluid">
 		<div class="row">
 			<div class="col-xs-12 col-md-4">
-				<button type="button" class="btn btn-primary btn-large btn-block" onmousedown="stickJab(jerry)"
+				<button type="button" class="action btn btn-primary btn-large btn-block" onmousedown="stickJab(jerry)"
 					onmouseup="returnImg()">Poke with stick</button>
 			</div>
 			<div class="col-xs-12 col-md-4">
-				<button type="button" class="btn btn-primary btn-large btn-block" onmousedown="rakeJab(jerry)"
+				<button type="button" class="action btn btn-primary btn-large btn-block" onmousedown="rakeJab(jerry)"
 					onmouseup="returnImg()">Poke with the rake</button>
 			</div>
 			<div class="col-xs-12 col-md-4">
-				<button type="button" class="btn btn-primary btn-large btn-block" onmousedown="shovelSmack(jerry)"
+				<button type="button" class="action btn btn-primary btn-large btn-block" onmousedown="shovelSmack(jerry)"
 					onmouseup="returnImg()">Smack with the shovel</button>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-md-4" id="items">
-				<button type="button" class="btn btn-warning btn-large btn-block" onclick="giveItem('yell')">Yell while
+				<button type="button" class="action btn btn-warning btn-large btn-block" onclick="giveItem('yell')">Yell
+					while
 					poking</button>
 			</div>
 			<div class="col-xs-12 col-md-4" id="items">
-				<button type="button" class="btn btn-warning btn-large btn-block" onclick="giveItem('fire')">Apply fire to
+				<button type="button" class="action btn btn-warning btn-large btn-block" onclick="giveItem('fire')">Apply
+					fire to
 					weapon</button>
 			</div>
 			<div class="col-xs-12 col-md-4" id="items">
-				<button type="button" class="btn btn-warning btn-large btn-block" onclick="giveItem('honey')">Bear licks honey &
+				<button type="button" class="action btn btn-warning btn-large btn-block" onclick="giveItem('honey')">Bear
+					licks honey &
 					sleeps heavier</button>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="actions">
 			<div class="col text-center">
-				<button class="btn btn-info" onclick="reset()">Start Over?</button>
+				<button id="actions" class="btn btn-info" onclick="reset()">Start Over?</button>
 			</div>
 		</div>
 		<div class="row">
