@@ -95,6 +95,7 @@ function update(character) {
     alert('The bear awakens in anger. You shouldn\'t have poked the bear! You are now dead.');
     let elements = document.getElementsByClassName("action")
     for (var i = 0; i < elements.length; i++) {
+      // @ts-ignore
       elements[i].disabled = true;
     }
     document.getElementById('image').innerHTML = `<img src="assets/images/Mix.png" />`
@@ -120,6 +121,7 @@ function reset() {
     jerry.items = [];
     let elements = document.getElementsByClassName("action")
     for (var i = 0; i < elements.length; i++) {
+      // @ts-ignore
       elements[i].disabled = false;
     }
     returnImg();
