@@ -70,7 +70,7 @@ function shovelSmack(character) {
   update(character);
 }
 function giveItem(itemName) {
-  jerry.items.push(items[itemName])
+  bear.items.push(items[itemName])
 }
 
 function addMods() {
@@ -115,9 +115,9 @@ function reset() {
   var txt;
   if (confirm("Start over and do things right?")) {
     txt = "Sure, I won't poke the bear this time!";
-    jerry.health = 100;
-    jerry.hits = 0;
-    jerry.items = [];
+    bear.health = 100;
+    bear.hits = 0;
+    bear.items = [];
     let elements = document.getElementsByClassName("action")
     for (var i = 0; i < elements.length; i++) {
       elements[i].disabled = false;
