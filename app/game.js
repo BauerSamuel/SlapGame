@@ -1,7 +1,7 @@
 //setTimeout()
 
-var jerry = {
-  name: 'Jerry',
+var bear = {
+  name: 'Bear',
   health: 100,
   hits: 0,
   attacks: {
@@ -70,13 +70,13 @@ function shovelSmack(character) {
   update(character);
 }
 function giveItem(itemName) {
-  jerry.items.push(items[itemName])
+  bear.items.push(items[itemName])
 }
 
 function addMods() {
   let total = 0;
-  for (let i = 0; i < jerry.items.length; i++) {
-    var item = jerry.items[i];
+  for (let i = 0; i < bear.items.length; i++) {
+    var item = bear.items[i];
     total += item.modifier;
   }
   return total;
@@ -116,19 +116,19 @@ function reset() {
   var txt;
   if (confirm("Start over and do things right?")) {
     txt = "Sure, I won't poke the bear this time!";
-    jerry.health = 100;
-    jerry.hits = 0;
-    jerry.items = [];
+    bear.health = 100;
+    bear.hits = 0;
+    bear.items = [];
     let elements = document.getElementsByClassName("action")
     for (var i = 0; i < elements.length; i++) {
       // @ts-ignore
       elements[i].disabled = false;
     }
     returnImg();
-    update(jerry);
+    update(bear);
   } else {
     txt = "Cancel!";
   }
 }
 
-update(jerry);
+update(bear);
